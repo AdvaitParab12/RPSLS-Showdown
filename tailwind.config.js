@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        custom: ["Game", "sans-serif"], 
+        custom: ["Game", "sans-serif"],
+      },
+      screens: {
+        "h-600": { raw: "(min-height: 720px)" },
       },
     },
   },

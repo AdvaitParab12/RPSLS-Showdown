@@ -22,3 +22,9 @@
   @apply h-36 w-36 border border-black rounded-full flex justify-center items-center transition-all duration-300 cursor-pointer hover:scale-110 hover:rotate-12;
 } */
 
+@media (min-height: 600px) {
+  .pentagon-container {
+    margin-top: 24rem; /* Equivalent to mt-96 */
+  }
+}
+
