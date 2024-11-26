@@ -26,7 +26,7 @@ This game is perfect for adding a fun twist to traditional gameplay and can be u
 # Preview
 
 <!-- ![image](./assets/Mobile.png) -->
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:center">
-<img src="./assets/Mobile.png" alt="Mobile Image" style="width: 300px; height: auto;">
-<img src="./assets/Laptop.png" alt="Laptop Image" style="width: 550px; height: auto;">
+<div style="display:flex;flex-direction:row;align-items:center;justify-content:center">
+<img src="./assets/Mobile.png" alt="Mobile Image" style="width: 200px; height: auto;">
+<img src="./assets/Laptop.png" alt="Laptop Image" style="width: 500px; height: auto;">
 </div>
