@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <title>RPSLS Showdown</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main
+      class="h-screen w-screen bg-slate-900 flex flex-col items-center justify-around"
+    >
+      <section
+        class="heading h-32 w-full rounded-3xl py-5 px-6 flex items-center justify-between m-8 sm:w-[300px]"
+      >
+        <div class="description sm:flex flex-col items-start invisible sm:visible">
+          <p class="p underline">ROCK</p>
+          <p class="p underline">PAPER</p>
+          <p class="p underline">SCISSORS</p>
+          <p class="p underline">LIZARD</p>
+          <p class="p underline">SPOCK</p>
+        </div>
+        <div class="flex gap-4">
+          <button
+            class="reset h-24 w-24 font-semibold text-2xl bg-white border border-black rounded-xl shadow-xl cursor-pointer"
+          >
+            Reset
+          </button>
+          <p class="text-white text-right my-5 text-xl">
+            Computer <br />
+            Points
+          </p>
+          <input class="computer-points points" readonly />
+          <p class="text-white text-right my-5 text-xl">
+            Player <br />
+            Points
+          </p>
+          <input class="player-points points" readonly />
+        </div>
+      </section>
+      <section
+        class="game-options flex h-fit relative top-[-5%] justify-center w-screen"
+      >
+        <section
+          class="game-options relative flex justify-center items-center w-screen h-[80vh] -m-10"
+        >
+          <!-- Pentagon Container -->
+          <div
+            class="pentagon-container relative flex justify-center items-center w-48 h-48 transform rotate-[-55deg]"
+          >
+            <!-- Paper -->
+            <button
+              class="circle pentagon-item absolute w-32 h-32 transition-transform duration-300 ease-in-out"
+              value="paper"
+            >
+              <img
+                src="../assets/images/paper.svg"
+                class="hover:scale-110 cursor-pointer"
+                alt="paper"
+              />
+            </button>
+            <!-- Rock -->
+            <button
+              class="circle pentagon-item absolute w-32 h-32 transition-transform duration-300 ease-in-out"
+              value="rock"
+            >
+              <img
+                src="../assets/images/rock.svg"
+                class="hover:scale-110 cursor-pointer"
+                alt="rock"
+              />
+            </button>
+            <!-- Scissors -->
+            <button
+              class="circle pentagon-item absolute w-32 h-32 transition-transform duration-300 ease-in-out"
+              value="scissor"
+            >
+              <img
+                src="../assets/images/scissors.svg"
+                class="hover:scale-110 cursor-pointer"
+                alt="scissor"
+              />
+            </button>
+            <!-- Lizard -->
+            <button
+              class="circle pentagon-item absolute w-32 h-32 transition-transform duration-300 ease-in-out"
+              value="lizard"
+            >
+              <img
+                src="../assets/images/lizard.svg"
+                class="hover:scale-110 cursor-pointer"
+                alt="lizard"
+              />
+            </button>
+            <!-- Spock -->
+            <button
+              class="circle pentagon-item absolute w-32 h-32 transition-transform duration-300 ease-in-out"
+              value="spock"
+            >
+              <img
+                src="../assets/images/spock.svg"
+                class="hover:scale-110 cursor-pointer"
+                alt="spock"
+              />
+            </button>
+          </div>
+        </section>
+      </section>
+      <p class="display-winner text-white relative -top-10"></p>
+      <!-- <section>
+        <button
+          class="rules-btn absolute bottom-8 right-8 grid place-items-center p-4 rounded-lg border border-white shadow-[5px_5px_1px_white] transition-transform duration-400 ease-linear cursor-pointer text-white font-semibold text-lg leading-4 hover:scale-110"
+        >
+          RULES
+        </button>
+        <div
+          class="modal hidden fixed inset-0 z-10 w-full h-full overflow-auto backdrop-blur-xl"
+        >
+          <div
+            class="content text-white mx-auto my-[15%] p-5 pl-[10rem] border border-gray-500 w-1/2 tracking-wide font-semibold rounded-lg"
+          >
+            <span
+              class="close text-gray-400 float-right text-2xl font-bold transition-all duration-500 ease-in-out hover:text-white hover:no-underline hover:scale-110 hover:rotate-90 focus:text-white focus:no-underline focus:scale-110 focus:rotate-90 cursor-pointer"
+              >&times;</span
+            >
+            <h2 class="font-bold text-3xl underline">Rules</h2>
+            <ul class="list-disc">
+              <li>Scissors cuts paper.</li>
+              <li>Paper covers rock.</li>
+              <li>Rock crushes lizard.</li>
+              <li>Lizard poisons Spock.</li>
+              <li>Spock smashes scissors.</li>
+              <li>Scissors decapitates lizard.</li>
+              <li>Lizard eats paper.</li>
+              <li>Paper disproves Spock.</li>
+              <li>Spock vaporizes rock.</li>
+              <li>Rock crushes scissors.</li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+      <section>
+        <button
+          class="rules-btn fixed bottom-8 right-8 grid place-items-center p-4 rounded-lg border border-white shadow-[5px_5px_1px_white] transition-transform duration-400 ease-linear cursor-pointer text-white font-semibold text-lg leading-4 hover:scale-110"
+        >
+          RULES
+        </button>
+        <div
+          class="modal hidden fixed inset-0 z-10 w-full h-full overflow-auto backdrop-blur-xl"
+        >
+          <div
+            class="content text-white mx-auto my-[15%] p-5 pl-[10rem] border border-gray-500 w-1/2 tracking-wide font-semibold rounded-lg"
+          >
+            <span
+              class="close text-gray-400 float-right text-2xl font-bold transition-all duration-500 ease-in-out hover:text-white hover:no-underline hover:scale-110 hover:rotate-90 focus:text-white focus:no-underline focus:scale-110 focus:rotate-90 cursor-pointer"
+              >&times;</span
+            >
+            <h2 class="font-bold text-3xl underline">Rules</h2>
+            <ul class="list-disc">
+              <li>Scissors cuts paper.</li>
+              <li>Paper covers rock.</li>
+              <li>Rock crushes lizard.</li>
+              <li>Lizard poisons Spock.</li>
+              <li>Spock smashes scissors.</li>
+              <li>Scissors decapitates lizard.</li>
+              <li>Lizard eats paper.</li>
+              <li>Paper disproves Spock.</li>
+              <li>Spock vaporizes rock.</li>
+              <li>Rock crushes scissors.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

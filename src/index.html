@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPSLS Showdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-custom">
+    <main
+      class="h-screen flex flex-col items-center bg-slate-900 overflow-hidden"
+    >
+      <!-- Title Section -->
+      <section class="title flex justify-center m-5">
+        <h1
+          class="text-2xl font-bold border border-slate-600 p-3 rounded-lg text-white tracking-widest"
+        >
+          RPSLS Showdown
+        </h1>
+      </section>
+
+      <!-- Points Section -->
+      <section class="flex flex-col w-36 gap-2 lg:flex lg:flex-row lg:justify-around lg:gap-10 lg:w-full">
+        <!-- Computer Points -->
+        <div
+          class="p-1 border border-slate-400 flex flex-col justify-center items-center lg:p-4 rounded-xl"
+        >
+          <div>
+            <h2 class="text-sm lg:text-xl font-semibold text-white tracking-widest">Computer Points</h2>
+          </div>
+
+          <div class="lg:p-2 lg:w-full lg:rounded-md">
+            <input
+              type="number"
+              class="text-sm w-28 computer-points text-center p-2 rounded-md lg:text-2xl lg:w-full cursor-not-allowed"
+              readonly
+            />
+          </div>
+        </div>
+        <button
+            class="reset lg:h-24 lg:w-24 font-semibold text-2xl bg-white rounded-xl shadow-xl cursor-pointer"
+          >
+            Reset
+          </button>
+        <!-- Player Points -->
+        <div
+          class="p-1 border border-slate-400 flex flex-col justify-center items-center lg:p-4 rounded-xl"
+        >
+          <div>
+            <h2 class="text-sm lg:text-xl font-semibold text-white tracking-widest">Player Points</h2>
+          </div>
+          <div class="lg:p-2 lg:w-full rounded-md">
+            <input
+              type="number"
+              class="text-sm w-28 player-points text-center p-2 rounded-md lg:text-2xl lg:w-full cursor-not-allowed"
+              readonly
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Buttons -->
+      <section
+        class="pentagon-container flex flex-wrap justify-center items-center mt-10 h-40 w-52 lg:flex lg:justify-center lg:items-center lg:my-36 lg:w-full lg:h-96 lg:px-16 relative gap-4"
+      >
+        <button class="circle pentagon-item w-[50px] h-[50px] lg:w-[150px] lg:h-[150px]" value="rock">
+          <img
+            src="/assets/images/rock.svg"
+            class="hover:scale-110"
+            alt="Rock"
+          />
+        </button>
+        <button class="circle pentagon-item w-[50px] h-[50px] lg:w-[150px] lg:h-[150px]" value="paper">
+          <img
+            src="/assets/images/paper.svg"
+            class="hover:scale-110"
+            alt="Paper"
+          />
+        </button>
+        <button
+          class="circle pentagon-item w-[50px] h-[50px] lg:w-[150px] lg:h-[150px]"
+          value="scissor"
+        >
+          <img
+            src="/assets/images/scissor.svg"
+            class="hover:scale-110"
+            alt="Scissors"
+          />
+        </button>
+        <button class="circle pentagon-item w-[50px] h-[50px] lg:w-[150px] lg:h-[150px]" value="lizard">
+          <img
+            src="/assets/images/lizard.svg"
+            class="hover:scale-110"
+            alt="Lizard"
+          />
+        </button>
+        <button class="circle pentagon-item w-[50px] h-[50px] lg:w-[150px] lg:h-[150px]" value="spock">
+          <img
+            src="/assets/images/spock.svg"
+            class="hover:scale-110"
+            alt="Spock"
+          />
+        </button>
+      </section>
+      <p class="display-winner px-4 text-white relative lg:-top-10 tracking-widest"></p>
+      <section>
+        <button
+          class="rules-btn fixed bottom-4 right-28 grid place-items-center p-4 rounded-lg border border-white shadow-[5px_5px_1px_white] transition-transform duration-400 ease-linear cursor-pointer text-white font-semibold text-lg leading-4 hover:scale-110"
+        >
+          RULES
+        </button>
+        <div
+          class="modal hidden fixed inset-0 z-10 w-full h-full overflow-auto backdrop-blur-2xl"
+        >
+          <div
+            class="content text-white mx-auto my-[15%] p-5 pl-[2rem] border border-gray-500 w-screen tracking-wide font-semibold rounded-lg lg:w-1/2 lg:pl-[10rem]"
+          >
+            <span
+              class="close text-gray-400 float-right text-2xl font-bold transition-all duration-500 ease-in-out hover:text-white hover:no-underline hover:scale-110 hover:rotate-90 focus:text-white focus:no-underline focus:scale-110 focus:rotate-90 cursor-pointer"
+              >&times;</span
+            >
+            <h2 class="font-bold text-3xl underline tracking-widest">Rules</h2>
+            <ul class="list-disc tracking-widest">
+              <li>Scissors cuts paper.</li>
+              <li>Paper covers rock.</li>
+              <li>Rock crushes lizard.</li>
+              <li>Lizard poisons Spock.</li>
+              <li>Spock smashes scissors.</li>
+              <li>Scissors decapitates lizard.</li>
+              <li>Lizard eats paper.</li>
+              <li>Paper disproves Spock.</li>
+              <li>Spock vaporizes rock.</li>
+              <li>Rock crushes scissors.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

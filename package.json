@@ -1,0 +1,18 @@
+{
+  "name": "rpsls",
+  "version": "1.0.0",
+  "description": "Rock, Paper, Scissors, Lizard, Spock\r Overview:\r Rock, Paper, Scissors, Lizard, Spock is an extended version of the classic game that adds more complexity and options. This game introduces two additional moves—Lizard and Spock—allowing for a greater variety of outcomes and strategies.",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.0",
+    "postcss": "^8.4.49",
+    "svgo": "^3.3.2",
+    "tailwindcss": "^3.4.15"
+  }
+}

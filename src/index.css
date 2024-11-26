@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Game';
+  src: url('/assets/Games.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.p {
+  @apply text-white font-semibold text-xl drop-shadow-xl;
+}
+
+.points {
+  @apply h-24 w-24 bg-white border-2 border-black rounded-lg p-4 text-5xl shadow-md cursor-not-allowed;
+}
+
+/* .circle {
+  @apply h-36 w-36 border border-black rounded-full flex justify-center items-center transition-all duration-300 cursor-pointer hover:scale-110 hover:rotate-12;
+} */
+
